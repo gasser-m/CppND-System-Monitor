@@ -29,7 +29,8 @@ vector<Process>& System::Processes() {
         processes_.emplace_back(Process(i));
     }
 
-    std::sort(processes_.begin(), processes_.end(), std::greater<Process>());
+    std::sort(processes_.begin(), processes_.end());
+    std::reverse(processes_.begin(), processes_.end());
 
     return processes_;
 }
